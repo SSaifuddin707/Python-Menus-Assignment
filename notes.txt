@@ -1,0 +1,66 @@
+response = int(input("Select an option [1-5]\n"))
+
+if response == 1:	
+    Option01Menu()
+    print(item1)    
+elif response == 2:
+    Option02Menu()
+    print(item2)
+elif response == 3:
+    Option03Menu()    
+    print(item3)
+elif response == 4:
+    Option04Menu()
+    print(item4)
+elif response == 5:
+    Option05Menu()
+    print(item5)
+elif response == 6:
+    sys.exit()
+
+
+
+
+
+
+
+item = ""
+
+os.system("cls")
+
+def build_Menu():
+    global item
+    count = -1
+    menuS = open("Build-Main.txt", "r")
+    for line in menuS:
+        if count > 0:
+            item += ("{}. {}".format(count, line))
+        else:
+            item += ("{}".format(line))
+        count += 1
+    menuS.close()
+    print(item)
+
+    response = int(input("Select an option [1-5]\n"))
+
+    if response == 1:	
+        Option01Menu()
+        print(item1)    
+    elif response == 2:
+        Option02Menu()
+        print(item2)
+    elif response == 3:
+        Option03Menu()    
+        print(item3)
+    elif response == 4:
+        Option04Menu()
+        print(item4)
+    elif response == 5:
+        Option05Menu()
+        print(item5)
+    elif response == 6:
+        sys.exit()
+
+
+            ##Builds and Prints Main Menu##    
+build_Menu()
